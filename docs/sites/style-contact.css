@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente*/
+    text-decoration: none;  /*eliminar las lineas de abajo de los enlaces -> quitar subrayado*/
+    list-style: none;   /*para quitar las viñetas de las listas*/
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../images/matrix1.jpg);
+    background-size: cover;
+    background-position: center;     /* Centra la imagen en el elemento */
+    background-repeat: no-repeat;    /* Evita que la imagen se repita en mosaico */
+    background-attachment: fixed;    /* Mantiene la imagen fija al hacer scroll */
+    color: #DFDDE0;
+}
+
+/*Afecta a los contenedores (TODAS las clases que contienen la cadena "container")*/
+.container{
+    max-width: 1200px;  /*tamaño estándar de la pantalla*/
+    margin: 0 auto;  /*para centrar y que no se salga del contenedor*/
+}
+
+.header{
+    display: flex;
+    position: relative;     /*para poner elementos sobre otros*/
+}
+
+.menu{
+    padding: 10px 20px;   /*para que el texto no se pegue a los lados*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;  /*para que los elementos se pongan en fila y no en columna*/
+    align-items: center;    /*para alinear verticalmente los elementos (y no se vean a distintas alturas)*/
+    justify-content: space-between; /*para distribuir el espacio entre los elementos (incluir separación)*/
+    z-index: 1000;  /*para que el menu se ponga siempre enfrente de otro elemento*/
+}
+
+.logo{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #810000;
+    width: 40%;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;  /*separación entre elementos de lista*/
+    color: #DFDDE0;
+    display: block; /*elemento en bloque (misma separación por cada lado)*/
+    font-weight: 600;   /*tamaño de negrilla*/
+}
+
+.menu .navbar ul li a:hover{
+    color: #7e7474;
+}
+
+/* -------- BOTONES -------- */
+.btn{
+    display: inline-block;
+    background: #810000;
+    color: #DFDDE0;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 30px;   /*separación entre elementos de lista*/
+    border-radius: 30px;  /*redondear los bordes del boton*/
+    text-transform: uppercase;   /*para que el texto del botón esté en mayúsculas*/
+    box-shadow: 0 0 10px #810000, inset 0 0 5px #810000;
+}
+
+.btn:hover{
+    background-color: #500000;
+}
+
+.btn-1{
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0;
+    background: #810000;
+    color: #DFDDE0;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 30px;   /*separación entre elementos de lista*/
+    border-radius: 30px;  /*redondear los bordes del boton*/    
+}
+
+.btn-1:hover{
+    background-color: #500000;
+}
+
+/* -------- CONTACT ME -------- */
+.contactme{
+    background-color: #26232349;
+    margin-top: 300px;
+    width: 30%;
+    padding: 40px 80px;
+    justify-items: center;
+}
+
+.contactme h1{
+    font-size: 45px;
+}
+
+.contactme hr{
+    width: 30%;
+}
+
+.contactme-info{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactme-slide, .contactme-slide-2{
+    padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 250px;
+}
+
+.contactme-slide-2{
+    padding: 20px 8px;
+}

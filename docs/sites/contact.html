@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alba García Camacho</title>
+    <link rel="stylesheet" href="style-contact.css">
+</head>
+<body>
+    <header>
+        <div class="menu container">
+            <div class="logo">
+                <p>./contact</p>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul class="cv">
+                    <a href="files/CV.pdf" class="btn" download="CV-AlbaGarcíaCamacho.pdf">Download CV</a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="contactme container">
+        <h1>Contact Me</h1>
+        <hr>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="013eee0f-6a3e-4d5c-b5a1-23881235e5dd">
+            <div class="contactme-info">
+                <input type="text" name="Name" placeholder="Your name" class="contactme-slide" required>
+                <input type="email" name="Email" placeholder="Your email" class="contactme-slide" required>
+                <textarea name="Message" placeholder="Message" rows="3" class="contactme-slide-2" required></textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn-1">Send</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

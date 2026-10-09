@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&display=swap');
+@import url('https://freefrontend.com/css-progress-bars/#simple-progress-bar-animation-l');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente*/
+    text-decoration: none;  /*eliminar las lineas de abajo de los enlaces -> quitar subrayado*/
+    list-style: none;   /*para quitar las viñetas de las listas*/
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../images/matrix3.png);
+    background-size: cover;
+    background-position: center;     /* Centra la imagen en el elemento */
+    background-repeat: no-repeat;    /* Evita que la imagen se repita en mosaico */
+    background-attachment: fixed;    /* Mantiene la imagen fija al hacer scroll */
+    color: #DFDDE0;
+}
+
+/*Afecta a los contenedores (TODAS las clases que contienen la cadena "container")*/
+.container{
+    max-width: 1200px;  /*tamaño estándar de la pantalla*/
+    margin: 0 auto;  /*para centrar y que no se salga del contenedor*/
+}
+
+.header{
+    display: flex;
+    position: relative;     /*para poner elementos sobre otros*/
+}
+
+.menu{
+    padding: 10px 20px;   /*para que el texto no se pegue a los lados*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;  /*para que los elementos se pongan en fila y no en columna*/
+    align-items: center;    /*para alinear verticalmente los elementos (y no se vean a distintas alturas)*/
+    justify-content: space-between; /*para distribuir el espacio entre los elementos (incluir separación)*/
+    z-index: 1000;  /*para que el menu se ponga siempre enfrente de otro elemento*/
+}
+
+.logo{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #810000;
+    width: 40%;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;  /*separación entre elementos de lista*/
+    color: #DFDDE0;
+    display: block; /*elemento en bloque (misma separación por cada lado)*/
+    font-weight: 600;   /*tamaño de negrilla*/
+}
+
+.menu .navbar ul li a:hover{
+    color: #7e7474;
+}
+
+/* -------- BOTONES -------- */
+.btn{
+    display: inline-block;
+    background: #810000;
+    color: #DFDDE0;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 30px;   /*separación entre elementos de lista*/
+    border-radius: 30px;  /*redondear los bordes del boton*/
+    text-transform: uppercase;   /*para que el texto del botón esté en mayúsculas*/
+    box-shadow: 0 0 10px #810000, inset 0 0 5px #810000;
+}
+
+.btn:hover{
+    background-color: #500000;
+}
+
+/* -------- SKILLS -------- */
+.skills-title{
+    margin-top: 200px;
+    text-align: center;
+}
+
+.skills-title h1{
+    font-size: 60px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 20px;
+}
+
+#grad{
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0.082), #810000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.skills-matrix{
+    margin-top: 100px;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.skills-group{
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.skill-slide{
+    background-color: #26232381;
+    padding: 25px;
+    border-radius: 30px;
+}
+
+.skill-slide:hover{
+    background-color: #5000003f;
+}
+
+.skill-slide img{
+    width: 75px;
+    border-radius: 20px;
+    align-items: center;
+    border: 1px solid #26232381;
+    padding: 15px;
+}
+
+.skill-slide-title{
+    display: flex;
+    gap: 60px;
+}
+
+.skill-slide-title div p{
+    margin-bottom: 5px;
+}
+
+.skill-slide-title p{
+    border: #500000;
+    border-radius: 20px;
+    align-items: center;
+    border: 1px solid #26232381;
+    height: 30%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* -- PROGRESS BAR -- */
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 1px;
+  display: flex;
+  height: 10px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 0 10px #810000, inset 0 0 5px #810000;
+  border-radius: 100px;
+  background: #fff;
+  height: 8px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: var(--target-width, 0%); }
+}
