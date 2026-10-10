@@ -20,7 +20,7 @@ body{
 
 /*Afecta a los contenedores (TODAS las clases que contienen la cadena "container")*/
 .container{
-    max-width: 1200px;  /*tamaño estándar de la pantalla*/
+    max-width: 70%;  /*tamaño estándar de la pantalla*/
     margin: 0 auto;  /*para centrar y que no se salga del contenedor*/
 }
 
@@ -133,4 +133,89 @@ body{
 
 .contactme-slide-2{
     padding: 20px 8px;
+}
+
+/* -------- MÓVILES -------- */
+@media (max-width: 480px) {
+
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    /* Menú */
+    .header {
+        min-height: 60px;
+    }
+
+    .menu {
+        padding: 12px 4%;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .menu .navbar {
+        max-width: 100%;
+    }
+
+    .menu .navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 2px;
+    }
+
+    .menu .navbar ul li a {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+
+    /* Botones */
+    .btn {
+        font-size: 12px;
+        padding: 9px 18px;
+    }
+
+    .contactme{
+        background-color: #26232349;
+        margin-top: 60%;
+        margin-bottom: 60%;
+        width: 30%;
+        padding: 5% 10%;
+        justify-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .contactme h1{
+        font-size: 40px;
+    }
+
+    .contactme hr{
+        width: 70%;
+    }
+
+    .contactme-info{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactme-slide, .contactme-slide-2{
+        padding: 5% 0;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 8px;
+        font-family: 'Courier New', Courier, monospace;
+        width: 250px;
+    }
 }
