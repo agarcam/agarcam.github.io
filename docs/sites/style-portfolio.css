@@ -107,18 +107,6 @@ body{
     padding-bottom: 50px;
     background-color: #26232381;
     border-radius: 30px;
-    
-    /* Estado inicial: oculto y un poco a la derecha */
-    opacity: 0;
-    transform: translateX(100px); 
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* suavidad de la aparición */
-    transition-delay: 0.2s; 
-}
-
-/* Cuando JS detecta que entra en pantalla, le añade esta clase y se mueve a su sitio */
-.project-slide.activo {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .project-slide h1, .project-slide p{
@@ -132,15 +120,4 @@ body{
 
 .swiper-pagination-bullet{
     background-color: #810000;
-}
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateX(500px); /* Empieza 100px a la derecha */
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);     /* Llega a su posición original */
-  }
 }
