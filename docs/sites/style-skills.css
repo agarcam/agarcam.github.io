@@ -10,6 +10,10 @@
     list-style: none;   /*para quitar las viñetas de las listas*/
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     background-image: url(../images/matrix3.png);
@@ -18,11 +22,14 @@ body{
     background-repeat: no-repeat;    /* Evita que la imagen se repita en mosaico */
     background-attachment: fixed;    /* Mantiene la imagen fija al hacer scroll */
     color: #DFDDE0;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /*Afecta a los contenedores (TODAS las clases que contienen la cadena "container")*/
 .container{
     max-width: 70%;  /*tamaño estándar de la pantalla*/
+    max-width: 1200px;
     margin: 0 auto;  /*para centrar y que no se salga del contenedor*/
 }
 
@@ -124,6 +131,7 @@ body{
     background-color: #26232381;
     padding: 25px;
     border-radius: 30px;
+    width: 80%;
 }
 
 .skill-slide:hover{
@@ -140,7 +148,8 @@ body{
 
 .skill-slide-title{
     display: flex;
-    gap: 60px;
+    justify-content: space-between;
+    gap: 20%;
 }
 
 .skill-slide-title div p{
@@ -155,6 +164,7 @@ body{
     height: 30%;
     padding: 5px 10px;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 /* -- PROGRESS BAR -- */
@@ -183,4 +193,128 @@ body{
 @keyframes load {
   0% { width: 0; }
   100% { width: var(--target-width, 0%); }
+}
+
+/* -------- MÓVILES -------- */
+@media (max-width: 480px) {
+
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    /* Menú */
+    .header {
+        min-height: 60px;
+    }
+
+    .menu {
+        padding: 12px 4%;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .menu .navbar {
+        max-width: 100%;
+    }
+
+    .menu .navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 2px;
+    }
+
+    .menu .navbar ul li a {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+
+    /* Botones */
+    .btn {
+        font-size: 12px;
+        padding: 9px 18px;
+    }
+
+    /* Título */
+    .skills-title {
+        margin-top: 125px;
+        padding: 0 10px;
+    }
+
+    .skills-title h1 {
+        font-size: 40px;
+        line-height: 1.6;
+        padding-bottom: 12px;
+    }
+
+    /* Matriz */
+    .skills-matrix {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    .skills-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    /* Una tarjeta por fila */
+    .skill-slide {
+        flex: 1 1 auto;
+        width: 80%;
+        max-width: 360px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    /* Iconos */
+    .skill-slide img {
+        width: 55px;
+        padding: 8px;
+        border-radius: 13px;
+    }
+
+    /* Título y nivel */
+    .skill-slide-title {
+        padding: 5%;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .skill-slide-title div p {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+    .skill-slide-title p {
+        font-size: 11px;
+        padding: 5px 8px;
+        height: auto;
+        max-width: 45%;
+        overflow-wrap: anywhere;
+    }
+
+    /* Barra */
+    .progress {
+        height: 8px;
+        margin-top: 12px;
+        margin: 2% 0;
+    }
+
+    .progress-value {
+        height: 6px;
+    }
 }
