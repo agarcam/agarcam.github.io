@@ -20,3 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const observer : IntersectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('activo'); // Activa el efecto CSS
+                observer.unobserve(entry.target);    // Hace que solo ocurra la primera vez
+            }
+        });
+    }, {
+        threshold: 0.1 // Se activa cuando asoma un 10% del contenedor en la pantalla
+    });
+
+    // Busca todas tus diapositivas de proyecto y las pone bajo vigilancia
+    const slides = document.querySelectorAll('.project-slide');
+    slides.forEach(slide => observer.observe(slide));
+});
