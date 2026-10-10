@@ -20,7 +20,7 @@ body{
 
 /*Afecta a los contenedores (TODAS las clases que contienen la cadena "container")*/
 .container{
-    max-width: 1200px;  /*tamaño estándar de la pantalla*/
+    max-width: 70%;  /*tamaño estándar de la pantalla*/
     margin: 0 auto;  /*para centrar y que no se salga del contenedor*/
 }
 
