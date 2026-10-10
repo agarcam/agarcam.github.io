@@ -83,6 +83,24 @@ body{
     background-color: #500000;
 }
 
+.btn-1{
+    display: inline-block;
+    background: #810000;
+    color: #DFDDE0;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 30px;   /*separación entre elementos de lista*/
+    border-radius: 30px;  /*redondear los bordes del boton*/
+    text-transform: uppercase;   /*para que el texto del botón esté en mayúsculas*/
+    box-shadow: 0 0 10px #810000, inset 0 0 5px #810000;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.btn-1:hover{
+    background-color: #500000;
+}
+
 /* -------- PROJECTS -------- */
 .projects{
     max-width: 1000px;
@@ -124,6 +142,7 @@ body{
 .project-slide h1, .project-slide p{
     padding: 0 50px;
 }
+
 
 /* -------- SWIPER -------- */
 .swiper-button-next, .swiper-button-prev{
